@@ -89,7 +89,7 @@ namespace SuperHeroes.Controllers
 
         // POST: SuperHeroes/Create
         [HttpPost]
-        public async Task<ActionResult<SuperHero>> Create([Bind("Id,Name,FirstName,LastName,Place")] SuperHero superHero)
+        public async Task<ActionResult<SuperHero>> Create([Bind("Id,SuperHeroName,FirstName,LastName,Place,Age")] SuperHero superHero)
         {
             // ModelState.IsValid => indicates if it was possible to bind the incoming values from the request to the model correctly
             // and whether any explicitly specified validation rules were broken during the model binding process.
@@ -106,7 +106,7 @@ namespace SuperHeroes.Controllers
 
         // POST: SuperHeroes/Edit/5
         [HttpPut("{id}")]
-        public async Task<ActionResult> Edit(int id, [Bind("Id,Name,FirstName,LastName,Place")] SuperHero superHero)
+        public async Task<ActionResult> Edit(int id, [Bind("Id,SuperHeroName,FirstName,LastName,Place,Age")] SuperHero superHero)
         {
             if (id != superHero.Id)
             {
