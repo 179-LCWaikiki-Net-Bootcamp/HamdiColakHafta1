@@ -70,16 +70,21 @@ namespace SuperHeroes.Controllers
         }
 
         [HttpGet("Search")]
-        public async Task<ActionResult<IEnumerable<SuperHero>>> Search([FromQuery] string searchQuery)
+        public async Task<ActionResult<IEnumerable<SuperHero>>> Search([FromQuery] SearcQuery searchQuery)
         {
             IQueryable<SuperHero> query = _context.SuperHeroes;
 
-            if(!string.IsNullOrEmpty(searchQuery))
+            if(!string.IsNullOrEmpty(searchQuery.SuperHeroName))
             {
-                query = query.Where(sh => sh.SuperHeroName == searchQuery);
+                query = query.Where(sh => sh.SuperHeroName == searchQuery.SuperHeroName);
             }
 
-            if(query.Count() == 0)
+            if (!string.IsNullOrEmpty(searchQuery.FirstName))
+            {
+                query = query.Where(sh => sh.FirstName == searchQuery.FirstName);
+            }
+
+            if (query.Count() == 0)
             {
                 return NotFound("Hero not found");
             }
@@ -113,6 +118,11 @@ namespace SuperHeroes.Controllers
                 return NotFound("Hero not found!");
             }
 
+            if (!SuperHeroExists(superHero.Id))
+            {
+                return NotFound();
+            }
+
             if (ModelState.IsValid)
             {
                 try
@@ -123,14 +133,15 @@ namespace SuperHeroes.Controllers
                 // in case of concurrent update operation for the same hero
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SuperHeroExists(superHero.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    return BadRequest("Concurrent Update!");
+                    //if (!SuperHeroExists(superHero.Id))
+                    //{
+                    //    return NotFound();
+                    //}
+                    //else
+                    //{
+                    //    throw;
+                    //}
                 }
             }
             return NoContent();

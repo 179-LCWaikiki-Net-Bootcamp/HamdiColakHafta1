@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hamdi.colak\\Desktop\\Visual Studio Projects\\SuperHeroes\\SuperHeroes\\SuperHeroes.csproj": {}
+    "C:\\Users\\rndno\\Desktop\\Visual Studio Projects\\HamdiColakHafta1\\SuperHeroes\\SuperHeroes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hamdi.colak\\Desktop\\Visual Studio Projects\\SuperHeroes\\SuperHeroes\\SuperHeroes.csproj": {
+    "C:\\Users\\rndno\\Desktop\\Visual Studio Projects\\HamdiColakHafta1\\SuperHeroes\\SuperHeroes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hamdi.colak\\Desktop\\Visual Studio Projects\\SuperHeroes\\SuperHeroes\\SuperHeroes.csproj",
+        "projectUniqueName": "C:\\Users\\rndno\\Desktop\\Visual Studio Projects\\HamdiColakHafta1\\SuperHeroes\\SuperHeroes.csproj",
         "projectName": "SuperHeroes",
-        "projectPath": "C:\\Users\\hamdi.colak\\Desktop\\Visual Studio Projects\\SuperHeroes\\SuperHeroes\\SuperHeroes.csproj",
-        "packagesPath": "C:\\Users\\hamdi.colak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hamdi.colak\\Desktop\\Visual Studio Projects\\SuperHeroes\\SuperHeroes\\obj\\",
+        "projectPath": "C:\\Users\\rndno\\Desktop\\Visual Studio Projects\\HamdiColakHafta1\\SuperHeroes\\SuperHeroes.csproj",
+        "packagesPath": "C:\\Users\\rndno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rndno\\Desktop\\Visual Studio Projects\\HamdiColakHafta1\\SuperHeroes\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\hamdi.colak\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\rndno\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
